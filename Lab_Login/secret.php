@@ -25,7 +25,9 @@
     <td colspan="3" align="center" valign="baseline" id="point">請輸入一個四位數字</td>
   </tr>
   <tr>
-    <td colspan="3" align="center" id="point"><input type="text" id="hi" pattern="\d{4}" placeholder="四個數字不要重複"></td>
+    <td colspan="3" align="center" id="point">
+      <input type="text" id="hi"placeholder="四個數字不要重複"/>
+    </td>
   </tr>
             <tr align="center" id="answer">
                 <th>#</th>
@@ -58,17 +60,23 @@ var times = 0;
     //alert(g.value);
     //$('#hi').val('');
     var l=0;
-    for(var k=0;k<11;k++){
-      var count=0;
-      for (var i=0; i<4; i++) {
-        var idx = answer.indexOf(g[i]);
-        if(idx==k){
-          count++;
-        }
-     }
-     if(count>1){
-      alert("四個數字有數字重複，請重新輸入");
+    if(g.length>4){
+      alert("輸入超過四位數，請重新輸入");
       l++;
+    }
+    else{
+      for(var k=0;k<11;k++){
+        var count=0;
+        for (var i=0; i<4; i++) {
+          var idx = answer.indexOf(g[i]);
+          if(idx==k){
+            count++;
+          }
+      }
+      if(count>1){
+        alert("四個數字有數字重複，請重新輸入");
+        l++;
+        }
       }
     }
     if(l==0){
