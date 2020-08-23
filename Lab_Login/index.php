@@ -1,10 +1,11 @@
+
 <?php
   session_start();
   if(isset($_SESSION["userName"])){
   $user=$_SESSION["userName"];
 }
   else{
-  $user="GUEST";
+  $user="Guest";
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -12,22 +13,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Lab - index</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<table width="300" border="0" align="center" cellpadding="5" cellspacing="0" bgcolor="#F2F2F2">
+<table width="300" border="0" align="center" cellpadding="5" cellspacing="0">
   <tr>
-    <td align="center" bgcolor="#CCCCCC"><font color="#FFFFFF">會員系統 - 首頁</font></td>
+    <td align="center" id="system">會員系統 - 首頁</td>
   </tr>
   <tr>
-    <?php if($user=="GUEST"){ ?>
-    <td align="center" valign="baseline"><a href="login.php">登入</a> | <a href="secret.php">會員專用頁</a></td>
+    <?php if($user=="Guest"){ ?>
+    <td align="center" valign="baseline" id="point"><a href="login.php">登入</a></td>
     <?php }else{ ?>
-      <td align="center" valign="baseline"><a href="login.php?logout=1">登出</a> | <a href="secret.php">會員專用頁</a></td>
+      <td align="center" valign="baseline" id="point"><a href="login.php?logout=1">登出</a> | <a href="secret.php">會員小遊戲</a></td>
     <?php } ?>
   </tr>
   <tr>
-    <td align="center" bgcolor="#CCCCCC">Welcome!<?=$_SESSION["userName"]?></td>
+    <td align="center" id="system">Welcome!<?=$user?></td>
   </tr>
 </table>
 

@@ -1,0 +1,61 @@
+table{
+    border-top: 4px  #E2B3A3 solid;
+    border-bottom: 4px  #A3B6C5 solid;
+    font-family: Microsoft JhengHei;
+    color: 	#4F4F4F;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+   color: 	#4F4F4F;     
+}
+
+a:hover{
+    background-color: #A3B6C5;
+}
+
+#system{
+    font-size: 23px;
+    background-color: #D5E1DF;
+}
+
+#point{
+    font-size: 18px;
+    background-color: #EACACB;
+}
+
+.btn{
+    background-color: #D5E1DF;
+    color: #4F4F4F;
+    font-size:15px;
+    border-radius: 4px;
+    border: 1px solid #4F4F4F;
+    font-family: Microsoft JhengHei;
+    
+}
+
+.btn:hover{
+    background-color: #E2B3A3;
+    color: white;
+}
+
+#game{
+    color: 	#4F4F4F;
+    font-size: 23px;
+    border: none;
+    font-family: Microsoft JhengHei;
+    background-color: #D5E1DF;
+}
+
+#game:hover{
+    background-color: #A3B6C5;
+    border: none;
+}
+
+#answer{
+    font-size: 18px;
+    background-color: #EACACB;
+}
